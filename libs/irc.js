@@ -133,7 +133,7 @@ Server.prototype.onReceive = function (chunk) {
             return;
         }
 
-        var msg = this.buffer.slice(0, offset);
+        var msg = this.buffer.slice(0, offset).toLowerCase();
         this.buffer = this.buffer.slice(offset + 2);
 
         if (this.debug) {
